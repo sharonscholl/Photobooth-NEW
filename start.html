@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Webcam Image Collage</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset='utf-8'>
+	<link rel="stylesheet" href="main.css" type="text/css" media="screen">
+	<script src="fabric.js" charset="utf-8"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+	<div class="row">
+		<div class="column">
+			<photo id="cameraLens">
+				<img src="images/camera-lens-50.png" alt="Camera Lens" style="width:75%">
+		</div>
+		<div class="column">
+			<photo id="saycheese">
+				<img src="images/justsaycheese-blue-50.png" alt="Just Say Cheese" style="width:75%">
+		</div>
+	</div>
+
+	<div class="wrapper">
+
+		<section id="cameraContentarea">
+			<h1>
+				Let's have some fun!
+			</h1>
+			<p>
+				Take your photo for an image mashup.
+			</p>
+
+			<div class="camera">
+				<video id="video" playsinline>Video stream not available.</video>
+
+				<img id="startButton" src="images/button-take-photo-blue.png" alt="Take Photo Button" width="75" height="75">
+
+			</div>
+
+			<!-- this canvas will be hidden. It stores the image from the camera-->
+			<canvas id="canvasPhoto">
+			</canvas>
+
+			<div class="output">
+				<img id="photo" alt="The screen capture will appear in this box.">
+
+			</div>
+
+			<p id='fred'>Great pic! Click to start mixing...
+
+				<img id="startMixingButton" src="images/button-startmixing-pink.png" alt="Start Mixing Button" width="75" height="75">
+
+		</section>
+
+		<section id="canvasMixArea">
+			<canvas id="c" width="800" height="600"></canvas>
+
+			<p>
+				<img src="images/greenglasses.png" id="greenglasses" alt="" width="100">
+				<img src="images/noseglasses.png" id="nose-glasses" alt="" width="100">
+				<img src="images/hairbow.png" id="hairbow" alt="" width="100">
+				<img src="images/pinkglasses.png" id="pinkglasses" alt="" width="100">
+				<img src="images/pinksunglasses.png" id="pinksunglasses" alt="" width="100">
+				<img src="images/bubble.png" id="bubble" alt="" width="100px">
+				<img src="images/smilinglips.png" id="smilinglips" alt="" width="100">
+			</p>
+
+			<p>
+				<img src="images/catears.png" id="catears" alt="" width="100">
+				<img src="images/eyemask.png" id="eyemask" alt="" width="100">
+				<img src="images/frogeyes.png" id="frogeyes" alt="" width="100">
+				<img src="images/hat.png" id="hat" alt="" width="100">
+				<img src="images/lipsnew.png" id="lips-new" alt="" width="100">
+				<img src="images/mustache.png" id="mustache" alt="" width="100">
+				<img src="images/teeth.png" id="teeth" alt="" width="100">
+			</p>
+
+			<p>
+				<a id="downloadButton" download="" href="">
+					<img src="images/button-save-image-orange-icon.png" alt"Download Save Button" width="75" height="75">
+				</a>
+
+				<img id="returnButton" src="images/button-new-image-turquoise-icon.png" alt="New Image Button" width="75" height="75">
+
+				<img id="backButton" src="images/button-back-red-icon.png" alt="Back Layer Button" width="75" height="75">
+
+				<img id="forwardButton" src="images/button-forward-green-icon.png" alt="Forward Layer Button" width="75" height="75">
+
+			</p>
+		</section>
+		<!--end mixing -->
+
+	</div>
+	<!-- end wrapper -->
+
+
+	<script src="cameraCollage.js">
+	</script>
+
+</body>
+
+</html>
